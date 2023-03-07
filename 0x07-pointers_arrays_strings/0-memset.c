@@ -4,21 +4,19 @@
  * _memset - fills the first n bytes of the memormy area
  * pointed to by @s with the constant byte @v.
  * @s: A pointer to the memory area to be filled.
- * @c: The character to fill the memory area with.
- * @n: The number of bytes to be filled.
- * description_memset: over there.
- *
+ * @b: The desired value.
+ * @n: The number of bytes to be changed
  * Return: A pointer to the filled memory area @s.
  *
  */
-void *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int index;
+	int i = 0;
 
-	unsigned char *memory - s, value = c;
-
-	for (index = 0; index < n; index++)
-		memory[index] = value;
-
-	return (memory);
+	for (; n > 0; i++)
+	{
+		s[i] = b;
+		n--;
+	}
+	return (s);
 }
